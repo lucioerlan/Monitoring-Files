@@ -1,0 +1,4 @@
+watchdog
+requests
+slack
+yagmail
