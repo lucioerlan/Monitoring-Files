@@ -25,16 +25,6 @@ is saved.
 ```
 <br><br> 
 
- 
-
-### Comments
-```sh
-Python3 start.py,  If using this script on Linux.
-This script has been modified for Windows users, if you are a Linux user like me, you need to modify this script for your Linux environment.
-
-python start.py Windows.
-```
-<br><br> 
 
 
 ### Installation libraries
