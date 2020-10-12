@@ -2,7 +2,8 @@
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Flucioerlan%2FMonitoring-Folder&count_bg=%23E71A18&title_bg=%23555555&icon=dependabot.svg&icon_color=%23E7E7E7&title=views&edge_flat=false)](https://hits.seeyoufarm.com)
 
 
-<p align=center> Python  Monitoring Folder 🔎
+<p align=center> Python  Monitoring Folder 🔎 </p>
+ 
 
 
 <img src="https://user-images.githubusercontent.com/47280551/71328798-9c8b7d80-24fb-11ea-8713-e6665ad984c5.png"/>
