@@ -2,3 +2,4 @@ watchdog
 requests
 slack
 yagmail
+python-dotenv
