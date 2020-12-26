@@ -30,7 +30,7 @@ class service(FileSystemEventHandler):
         print("ARCHIVE MOVED" + str(event))
         self.catch_all_handler(event)
         self.tempo = 0
-        arquivo = open('Logs/ARCHIVE_MODIFIED.txt', 'a') #LOGS
+        arquivo = open('Logs/moved/ARCHIVE_MODIFIED.txt', 'a') #LOGS
         arquivo.write(str(get_hora()) + str(event) + '\n')
         arquivo.close()
 
@@ -67,7 +67,6 @@ observador.start()
 tempo = 0
 events.tempo = 0
 print(style.OKGREEN + 'Service started, Reading Folder '+path+'' + style.ENDC)
-
 
 
 # If, every 10 Seconds the folder not receive Changes, a log is Sent!
