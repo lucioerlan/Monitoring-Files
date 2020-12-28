@@ -1,1 +1,0 @@
-25-12-2020 01-09-17<FileCreatedEvent: event_type=created, src_path='/home/erlanrox/Important/dev.txt', is_directory=False>

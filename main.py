@@ -1,4 +1,4 @@
-from Service.service import service
+from service.service import service
 
 try:
     servico = service()
