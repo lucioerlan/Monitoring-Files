@@ -7,7 +7,7 @@ import time
 from dotenv import load_dotenv
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
-from resources.sendLogs import send_slack, send_email, get_hora
+from resources.sendLogs import send_slack, send_email, datetime_now
 from utils.style import style
 load_dotenv()
 
@@ -23,7 +23,7 @@ class service(FileSystemEventHandler):
         self.catch_all_handler(event)
         self.tempo = 0
         arquivo = open('logs/create/ARCHIVE_CREATE.txt', 'a') #LOGS
-        arquivo.write(str(get_hora()) + str(event) + '\n')
+        arquivo.write(str(datetime_now()) + str(event) + '\n')
         arquivo.close()
 
     def on_moved(self,event):
@@ -31,7 +31,7 @@ class service(FileSystemEventHandler):
         self.catch_all_handler(event)
         self.tempo = 0
         arquivo = open('logs/moved/ARCHIVE_MODIFIED.txt', 'a') #LOGS
-        arquivo.write(str(get_hora()) + str(event) + '\n')
+        arquivo.write(str(datetime_now()) + str(event) + '\n')
         arquivo.close()
 
     def on_modified(self,event):
@@ -39,7 +39,7 @@ class service(FileSystemEventHandler):
         self.catch_all_handler(event)
         self.tempo = 0
         arquivo = open('logs/changed/ARCHIVE_UPDATE.txt', 'a') #LOGS
-        arquivo.write(str(get_hora()) + str(event) + '\n')
+        arquivo.write(str(datetime_now()) + str(event) + '\n')
         arquivo.close()
 
     def on_deleted(self,event):
@@ -47,7 +47,7 @@ class service(FileSystemEventHandler):
         self.catch_all_handler(event)
         self.tempo = 0
         arquivo = open('logs/delete/ARCHIVE_DELETE.txt', 'a') #LOGS
-        arquivo.write(str(get_hora()) + str(event) + '\n')
+        arquivo.write(str(datetime_now()) + str(event) + '\n')
         arquivo.close()
 
     def process(self,event):

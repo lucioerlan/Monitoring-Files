@@ -18,12 +18,12 @@ def send_slack():
         'channel': os.getenv("CHANNEL-SLACK"),  # ID Channel Slack
         'as_user': True,
     }
-    requests.post(url + get_hora() + '\n' + '*`YOU HAVE NOT RECEIVED FILES FOR 10 SECONDS ! `*  😟 '+'\n', data)
+    requests.post(url + datetime_now() + '\n' + '*`YOU HAVE NOT RECEIVED FILES FOR 10 SECONDS ! `*  😟 '+'\n', data)
 
 
 def send_email():
     receiver_emails = [os.getenv("SEND-EMAIL")]  # Email Send
-    subject = get_hora()
+    subject = datetime_now()
     yag = yagmail.SMTP(os.getenv("EMAIL-GMAIL"),  os.getenv("PASSWORD-GMAIL"))  # You Login Gmail
     
     # Body Message
@@ -33,5 +33,5 @@ def send_email():
     yag.send(receiver_emails, subject, contents)
 
 
-def get_hora():
+def datetime_now():
     return datetime.now().strftime("%d-%m-%Y %H-%M-%S")
