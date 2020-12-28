@@ -1,0 +1,1 @@
+25-12-2020 01-09-23<FileDeletedEvent: event_type=deleted, src_path='/home/erlanrox/Important/dev.txt', is_directory=False>
